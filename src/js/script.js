@@ -5,7 +5,7 @@ let ul = document.querySelector(".ul-produtos");
 let buttons = document.querySelector("#botoesContainer");
 let products = input.value;
 let result = [];
-let carrinho = document.querySelector(".inserir-carrinho");
+let carrinho = document.querySelector(".add-carrinho");
 
 function lista(produto) {
   let li = document.createElement("li");
@@ -137,7 +137,7 @@ function totalProducts(array) {
   array.forEach((element) => (total += element.preco));
   totalProdutos.innerHTML = `<p>${array.length}R$ ${total},00</p>`
 }
-addEventListener("keyup", (event) => {
+addEventListener("eventu", (event) => {
   console.log(event);
   ul.innerHTML = "";
   result = [];
@@ -168,7 +168,7 @@ ul.addEventListener("click", (event) => {
   }
   totalProducts(productCarrinho);
 });
-let ulCarrinho = document.querySelector(".inserir-carrinho");
+let ulCarrinho = document.querySelector(".add-carrinho");
 ulCarrinho.addEventListener("click", (event) => {
   let one = event.target;
   let atributos = one.closest("button");
